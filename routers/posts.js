@@ -64,7 +64,8 @@ router.get('/', (req, res) => {
 
 //show
 router.get('/:id', (req, res) => {
-  res.send(`Mostrami il post con id: ${req.params.id}`)
+  // res.send(`Mostrami il post con id: ${req.params.id}`)
+  res.json(posts.find(post => post.id === Number(req.params.id)))
 })
 
 //store
