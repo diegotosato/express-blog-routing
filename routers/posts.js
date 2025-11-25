@@ -58,7 +58,8 @@ Tutte le risposte saranno dei testi che confermeranno l’operazione che il serv
 
 //index
 router.get('/', (req, res) => {
-  res.send('Lista dei i post')
+  // res.send('Lista dei i post')
+  res.json(posts)
 })
 
 //show
