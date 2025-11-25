@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 
+//import router
+const postsRouter = require('./routers/posts')
+
 //rendo la cartella public un asset statico
 app.use(express.static('public'))
 
@@ -13,3 +16,8 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
     res.send('Home Page')
 })
+
+
+
+//Resource: Posts
+app.use('/api/posts', postsRouter)

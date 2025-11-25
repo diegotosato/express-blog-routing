@@ -1,3 +1,10 @@
+//import express
+const express = require('express')
+//ruoter instance
+const router = express.Router()
+
+
+
 const posts = [
   {
     id: 1,
@@ -44,4 +51,15 @@ const posts = [
   },
 ];
 
-module.exports = posts;
+/*
+All'interno creare le rotte per le operazioni CRUD (Index, Show, Create, Update e Delete)
+Tutte le risposte saranno dei testi che confermeranno l’operazione che il server deve eseguire, secondo le convenzioni REST.
+*/
+
+//index
+router.get('/', (req, res) => {
+  res.send('Mostrami tutti i post')
+})
+
+
+module.exports = router;
